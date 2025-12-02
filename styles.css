@@ -700,11 +700,7 @@ body {
 }
 
 .pricing-grid-5 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.pricing-card-wide {
-    grid-column: span 2;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .pricing-card {
@@ -1123,11 +1119,7 @@ body {
     }
 
     .pricing-grid-5 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .pricing-card-wide {
-        grid-column: span 2;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .discounts-grid {
@@ -1171,10 +1163,6 @@ body {
     .pricing-grid-5,
     .discounts-grid {
         grid-template-columns: 1fr;
-    }
-
-    .pricing-card-wide {
-        grid-column: span 1;
     }
 
     .section {
