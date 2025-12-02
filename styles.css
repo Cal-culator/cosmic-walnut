@@ -699,6 +699,14 @@ body {
     gap: 24px;
 }
 
+.pricing-grid-5 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pricing-card-wide {
+    grid-column: span 2;
+}
+
 .pricing-card {
     background: rgba(17, 17, 17, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -786,6 +794,40 @@ body {
     color: var(--text-gray);
     font-size: 12px;
     padding: 8px 0;
+}
+
+/* Discounts Section */
+.discounts-section {
+    margin-top: 60px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(17, 17, 17, 0.4);
+}
+
+.discounts-section h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: var(--blue-electric);
+    margin-bottom: 32px;
+}
+
+.discounts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.discount-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.discount-item p {
+    color: var(--text-gray);
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 /* Contact - Asymmetrical */
@@ -1080,6 +1122,18 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .pricing-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-card-wide {
+        grid-column: span 2;
+    }
+
+    .discounts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .wireframe-cube {
         width: 250px;
         height: 250px;
@@ -1113,8 +1167,14 @@ body {
 
     .programs-grid,
     .programs-grid-2x2,
-    .pricing-grid {
+    .pricing-grid,
+    .pricing-grid-5,
+    .discounts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pricing-card-wide {
+        grid-column: span 1;
     }
 
     .section {
