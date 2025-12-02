@@ -48,7 +48,7 @@ body {
 
 .coord {
     position: fixed;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 11px;
     color: var(--text-dim);
     letter-spacing: 0.1em;
@@ -91,7 +91,7 @@ body {
 
 .loader-code {
     display: block;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 11px;
     color: var(--text-dim);
     margin-bottom: 4px;
@@ -170,7 +170,7 @@ body {
 
 .logo-bracket {
     color: var(--blue-electric);
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .nav-menu {
@@ -228,7 +228,7 @@ body {
 }
 
 .hello-world {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 12px;
     color: var(--text-dim);
     letter-spacing: 0.15em;
@@ -270,6 +270,15 @@ body {
     animation: glitch2 2.5s infinite;
     color: #cccccc;
     z-index: -2;
+}
+
+.hero-affiliate {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: var(--text-gray);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
@@ -358,7 +367,7 @@ body {
 }
 
 .section-code {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 11px;
     color: var(--text-dim);
     letter-spacing: 0.1em;
@@ -440,7 +449,7 @@ body {
 }
 
 .card-number {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 48px;
     font-weight: 700;
     color: var(--blue-electric);
@@ -518,7 +527,7 @@ body {
 }
 
 .program-number {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 32px;
     font-weight: 700;
     color: var(--blue-electric);
@@ -526,7 +535,7 @@ body {
 }
 
 .program-tag {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 9px;
     letter-spacing: 0.1em;
     padding: 4px 8px;
@@ -556,7 +565,7 @@ body {
     color: var(--text-gray);
     font-size: 12px;
     padding: 6px 0;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Schedule - Asymmetrical */
@@ -616,7 +625,7 @@ body {
 .time-cell {
     color: var(--text-white);
     font-weight: 700;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .schedule-table tr:hover {
@@ -920,7 +929,7 @@ body {
 }
 
 .footer-code {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Animations */
