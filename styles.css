@@ -659,14 +659,20 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
+.schedule-simple {
+    table-layout: fixed;
+}
+
 .schedule-simple td {
     text-align: center;
     vertical-align: top;
     padding: 20px 16px;
+    width: 14.28%;
 }
 
 .schedule-simple th {
     text-align: center;
+    width: 14.28%;
 }
 
 .schedule-time {
