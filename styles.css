@@ -605,8 +605,9 @@ body {
     order: 1;
 }
 
-.schedule-list {
+.schedule-table-wrapper {
     order: 2;
+    overflow-x: auto;
 }
 
 .schedule-description {
@@ -624,42 +625,38 @@ body {
     margin-top: 40px;
 }
 
-.schedule-list {
-    display: grid;
-    gap: 16px;
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
 }
 
-.schedule-day {
-    background: rgba(17, 17, 17, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 20px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: border-color 0.3s;
-}
-
-.schedule-day:hover {
-    border-color: var(--blue-electric);
-}
-
-.schedule-day h4 {
-    font-size: 14px;
+.schedule-table th {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--blue-electric);
+    padding: 16px 12px;
+    text-align: left;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    min-width: 100px;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.schedule-day p {
+.schedule-table td {
+    padding: 16px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-gray);
-    font-size: 14px;
-    margin: 0;
 }
 
-.schedule-time {
-    font-family: 'Roboto Mono', monospace;
+.time-cell {
     color: var(--text-white);
-    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
+}
+
+.schedule-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .schedule-expansion {
