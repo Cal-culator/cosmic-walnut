@@ -596,17 +596,17 @@ body {
 
 .schedule-layout {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 80px;
     align-items: start;
 }
 
 .schedule-header {
-    order: 2;
+    order: 1;
 }
 
-.schedule-table-wrapper {
-    order: 1;
+.schedule-list {
+    order: 2;
 }
 
 .schedule-description {
@@ -616,41 +616,50 @@ body {
     margin-top: 30px;
 }
 
-.schedule-table-wrapper {
-    overflow-x: auto;
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12px;
-}
-
-.schedule-table th {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--blue-electric);
-    padding: 16px 12px;
-    text-align: left;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    font-size: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.schedule-table td {
-    padding: 16px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-gray);
-}
-
-.time-cell {
-    color: var(--text-white);
-    font-weight: 700;
+.schedule-phase {
     font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--blue-electric);
+    margin-top: 40px;
 }
 
-.schedule-table tr:hover {
-    background: rgba(255, 255, 255, 0.05);
+.schedule-list {
+    display: grid;
+    gap: 16px;
+}
+
+.schedule-day {
+    background: rgba(17, 17, 17, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.3s;
+}
+
+.schedule-day:hover {
+    border-color: var(--blue-electric);
+}
+
+.schedule-day h4 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    min-width: 100px;
+}
+
+.schedule-day p {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin: 0;
+}
+
+.schedule-time {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-white);
+    font-size: 13px;
 }
 
 /* Membership */
