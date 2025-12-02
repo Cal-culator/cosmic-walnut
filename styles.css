@@ -506,6 +506,11 @@ body {
     gap: 24px;
 }
 
+.programs-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
 .program-card {
     background: rgba(17, 17, 17, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -555,6 +560,22 @@ body {
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+.program-subtitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--blue-electric);
+    margin-bottom: 16px;
+}
+
+.program-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
 }
 
 .program-features {
@@ -1020,6 +1041,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .programs-grid-2x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1056,6 +1081,7 @@ body {
     }
 
     .programs-grid,
+    .programs-grid-2x2,
     .pricing-grid {
         grid-template-columns: 1fr;
     }
