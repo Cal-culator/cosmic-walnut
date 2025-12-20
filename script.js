@@ -1,6 +1,41 @@
 // Performance-Optimized JavaScript for BITKRAFT Website
 // Minimal functionality, maximum performance for low-end devices
 
+// Google Maps initialization with Snazzy Maps dark style
+function initMap() {
+    const location = { lat: 34.0204, lng: -117.8537 }; // 18730 Amar Rd, Walnut, CA
+
+    const mapStyles = [
+        {"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},
+        {"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},
+        {"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+        {"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},
+        {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},
+        {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},
+        {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},
+        {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},
+        {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},
+        {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},
+        {"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},
+        {"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},
+        {"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}
+    ];
+
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location,
+        styles: mapStyles,
+        disableDefaultUI: true,
+        zoomControl: true
+    });
+
+    new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Horizon Jiu Jitsu'
+    });
+}
+
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
     // Loader - Hide after page load
@@ -104,6 +139,52 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     });
+
+    // Contact Form Submission Handler
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                    formMessage.className = 'form-message success';
+                    contactForm.reset();
+                } else {
+                    formMessage.textContent = 'Something went wrong. Please try again.';
+                    formMessage.className = 'form-message error';
+                }
+            } catch (error) {
+                formMessage.textContent = 'Something went wrong. Please try again.';
+                formMessage.className = 'form-message error';
+            }
+
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                formMessage.textContent = '';
+                formMessage.className = 'form-message';
+            }, 5000);
+        });
+    }
 });
 
 // Optional: Intersection Observer for lazy loading or animations

@@ -383,6 +383,7 @@
                         <h4>LOCATION</h4>
                         <p>Adjacent to 24 Hour Fitness<br>18730 Amar Rd<br>Walnut, CA 91789</p>
                     </div>
+                    <div id="map" class="contact-map"></div>
                     <div class="info-block">
                         <h4>CONTACT</h4>
                         <p>Phone: (555) 555-5555<br>Email: info@cosmichorizonbjj.com</p>
@@ -398,28 +399,35 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key - Get yours free at https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="503e56f7-b15b-49d0-b95f-522e8b591922">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - Horizon Jiu Jitsu">
+                    <input type="hidden" name="from_name" value="Horizon Jiu Jitsu Website">
+                    <!-- Honeypot spam protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="FULL NAME" required>
+                        <input type="text" name="name" id="name" placeholder="FULL NAME" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="EMAIL" required>
+                        <input type="email" name="email" id="email" placeholder="EMAIL" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="PHONE NUMBER" required>
+                        <input type="tel" name="phone" id="phone" placeholder="PHONE NUMBER" required>
                     </div>
                     <div class="form-group">
-                        <select id="interest" required>
+                        <select name="program" id="interest" required>
                             <option value="">SELECT A PROGRAM</option>
-                            <option value="fundamentals">Fundamentals</option>
-                            <option value="advanced">Advanced Gi</option>
-                            <option value="nogi">No-Gi</option>
-                            <option value="kids">Kids Program</option>
-                            <option value="womens">Women's Class</option>
+                            <option value="Fundamentals">Fundamentals</option>
+                            <option value="Advanced Gi">Advanced Gi</option>
+                            <option value="No-Gi">No-Gi</option>
+                            <option value="Kids Program">Kids Program</option>
+                            <option value="Women's Class">Women's Class</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" placeholder="MESSAGE (OPTIONAL)" rows="4"></textarea>
+                        <textarea name="message" id="message" placeholder="MESSAGE (OPTIONAL)" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn-submit">SUBMIT</button>
                 </form>
@@ -448,5 +456,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcZX1BgJ_CBIvAhBUyOw-LcQ9XPUDqP3I&callback=initMap" async defer></script>
 </body>
 </html>
