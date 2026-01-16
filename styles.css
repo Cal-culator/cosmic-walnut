@@ -472,6 +472,137 @@ body {
     line-height: 1.7;
 }
 
+/* Instructor Hero Section */
+.instructor-hero {
+    background: var(--navy-deeper);
+}
+
+.instructor-hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.instructor-image-wrap {
+    flex-shrink: 0;
+}
+
+.instructor-headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.instructor-text h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.instructor-text p {
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Environment Section */
+.environment-section {
+    background: var(--navy-dark);
+}
+
+.environment-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.environment-content h2 {
+    margin-bottom: 30px;
+}
+
+.environment-content p {
+    color: var(--text-gray);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Progression Section */
+.progression-section {
+    background: var(--navy-deeper);
+}
+
+.progression-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.progression-content h2 {
+    margin-bottom: 30px;
+}
+
+.progression-content p {
+    color: var(--text-gray);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Kids Coaching Team Section */
+.kids-team-section {
+    background: var(--navy-dark);
+}
+
+.kids-team-content {
+    text-align: center;
+}
+
+.kids-team-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.kids-team-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-white);
+}
+
+.kids-team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.coach-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.coach-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.coach-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
 /* Programs Section - Asymmetrical */
 .programs {
     background: var(--navy-dark);
@@ -1360,6 +1491,36 @@ body {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+
+    /* New sections responsive */
+    .instructor-hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .instructor-headshot {
+        width: 150px;
+        height: 150px;
+    }
+
+    .instructor-text h2 {
+        font-size: 24px;
+    }
+
+    .environment-content p,
+    .progression-content p {
+        font-size: 16px;
+    }
+
+    .kids-team-grid {
+        gap: 30px;
+    }
+
+    .coach-headshot {
+        width: 80px;
+        height: 80px;
     }
 }
 
