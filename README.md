@@ -18,7 +18,7 @@ A dark, futuristic redesign of the Cosmic Horizon BJJ website inspired by the BI
 - All programs (Fundamentals, Advanced Gi, No-Gi, Kids, Women's, Open Mat)
 - Membership pricing (Founders, Standard, Family, Class Packs)
 - Contact information and free trial offer
-- Walnut, CA location details
+- Baldwin Park, CA location details
 
 ## Performance Optimizations
 
