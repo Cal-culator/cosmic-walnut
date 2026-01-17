@@ -473,8 +473,16 @@ body {
 }
 
 /* About Card with Image */
-.card-image-bottom {
-    margin-top: 24px;
+.about-card-with-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card-with-image .card-image-bottom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
 }
 
 .card-headshot {
