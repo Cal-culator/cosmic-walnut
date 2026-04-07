@@ -105,6 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hero Slideshow
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length > 1) {
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 4000);
+    }
+
     // Contact Form Submission Handler
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
