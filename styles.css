@@ -1411,6 +1411,7 @@ body {
         gap: 20px;
         transform: translateY(-100%);
         opacity: 0;
+        pointer-events: none;
         transition: 0.3s;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -1418,10 +1419,13 @@ body {
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-toggle {
         display: block;
+        z-index: 1001;
+        position: relative;
     }
 
     .programs-grid,
