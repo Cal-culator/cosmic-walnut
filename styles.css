@@ -763,27 +763,26 @@ body {
 }
 
 .schedule-simple {
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .schedule-simple td {
-    text-align: center;
+    text-align: left;
     vertical-align: top;
     padding: 20px 16px;
-    width: 14.28%;
+    white-space: nowrap;
 }
 
 .schedule-simple th {
     text-align: center;
-    width: 14.28%;
 }
 
 .schedule-time {
     font-family: 'Roboto Mono', monospace;
     font-size: 11px;
     color: var(--blue-electric);
-    display: block;
-    margin-bottom: 8px;
+    display: inline;
+    margin-right: 8px;
 }
 
 .schedule-row-label {
